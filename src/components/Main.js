@@ -7,7 +7,7 @@ function Main({onCardClick, onAddCard, onEditProfile, onEditAvatar}) {
     const [userName,  setUserName] = useState("");
     const [userJob, setUserJob] = useState("");
     const [userAvatar, setUserAvatar] = useState("");
-
+    console.log(cards[0])
     useEffect(() => {
         api.getUserInfo()
           .then((userInfo) => {
@@ -25,7 +25,7 @@ function Main({onCardClick, onAddCard, onEditProfile, onEditAvatar}) {
                 likes: cardData.likes,
             })))
         }).catch((err) => console.log(err))
-    }, [])
+    }, []) 
 
     return (
         <main>
@@ -57,6 +57,7 @@ function Main({onCardClick, onAddCard, onEditProfile, onEditAvatar}) {
               <ul className="elements">
                 {cards.map((cardElement)  => (
                   <Card
+                    key = {cardElement.cardId}
                     name = {cardElement.name}
                     link = {cardElement.link}
                     likes = {cardElement.likes}

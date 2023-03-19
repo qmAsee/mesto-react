@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PopupWithImage({card, onPopupClose}) {
+function ImagePopup({card, onPopupClose}) {
   return (
   <div className={`popup popup_type_pic ${card.link ? "popup_opened" : " "}`}>
     <figure className="popup__pic-box">
@@ -12,7 +12,7 @@ function PopupWithImage({card, onPopupClose}) {
   )
 }
 
-export default PopupWithImage;
+export default ImagePopup;
 
 
 

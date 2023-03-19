@@ -3,7 +3,7 @@ import '../App.css';
 import Header from './Header.js';
 import Footer from './Footer.js';
 import Main from './Main.js';
-import PopupWithImage from './PopupWithImage.js';
+import ImagePopup from './ImagePopup.js';
 import PopupWithForm from './PopupWithForm.js'
 
 function App() {
@@ -100,7 +100,7 @@ function App() {
           />
           <span className="avatarLink-error popup__error" />
         </PopupWithForm> 
-        <PopupWithImage
+        <ImagePopup
           card={imagePopup}
           onPopupClose={closeAllPopups}
         />

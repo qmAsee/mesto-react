@@ -1,4 +1,4 @@
-import { apiSettings } from '../utils/apiSettings.js'
+import { apiSettings } from './apiSettings.js'
 
 class Api {
   constructor(settings) {

@@ -4,7 +4,6 @@ import Header from './Header.js';
 import Footer from './Footer.js';
 import Main from './Main.js';
 import ImagePopup from './ImagePopup.js';
-import PopupWithForm from './PopupWithForm.js';
 import { EditProfilePopup } from './EditProfilePopup';
 import { EditAvatarPopup } from './EditAvatarPopup';
 import { AddPlacePopup } from './AddPlacePopup';

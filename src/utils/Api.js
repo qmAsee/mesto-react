@@ -36,26 +36,20 @@ class Api {
     }).then(res => this._checkResponse(res))
   }
 
-  putLike(cardId) {
+  putLike(cardId, isLiked) {
     return fetch(`${this._url}/cards/${cardId}/likes`, {
-      method: 'PUT',
+      method: isLiked ? 'PUT' : 'DELETE',
       headers: this._headers,
     }).then(res => this._checkResponse(res));
-  }
+  } 
 
-  deleteLike(cardId) {
-    return fetch(`${this._url}/cards/${cardId}/likes`, {
-      method: 'DELETE',
-      headers: this._headers
-    }).then(res => this._checkResponse(res));
-  }
 
-  putAvatar(link) {
+  putAvatar(data) {
     return fetch(`${this._url}/users/me/avatar`, {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        avatar: link
+        avatar: data.avatar
       })
     }).then(res => this._checkResponse(res))
   }
